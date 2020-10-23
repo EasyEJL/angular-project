@@ -1,0 +1,14 @@
+<form [formGroup]="developerForm" (ngSubmit)="submit()">
+    <label>
+        How much I like programming
+        <div></div> <input type="number" formControlName="rating">
+    </label>
+    <div></div>
+    <label>
+        Ways in which I like programming
+        <div></div>
+        <input type="text" formControlName="description" required>
+    </label>
+    <div></div>
+    <button [disabled]="!developerForm.valid" class="button" type="submit">Submit</button>
+</form>
